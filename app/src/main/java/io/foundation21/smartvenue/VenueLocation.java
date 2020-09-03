@@ -9,7 +9,7 @@ import java.util.Vector;
 public class VenueLocation {
 
     static int DEMO_LOCATION_ID = 1000;
-    static int DEMO_CAPACITY = 15;
+    static int DEMO_CAPACITY = 150;
     static String DEMO_LABEL = "Infinimesh Club Demo";
 
     static final String PARAM_TIME = "LONG_TIME";
@@ -121,7 +121,7 @@ public class VenueLocation {
                 break;
             }
 
-        int delta = 1;
+        float delta = 1;
         float ratio = (float) totalCount()/(float)capacity;
         if (ratio>0.0f && Math.random()>0.9f) delta = -1;
         if (ratio>0.7f && Math.random()>0.4f) delta = -1;
@@ -131,7 +131,7 @@ public class VenueLocation {
         if (ratio>=0.95f && Math.random()>0.95f) delta = 1;
         if (ratio>1.1f) delta=-1;
         if (ratio==0f && delta==-1) delta=1;
-        if (Math.random()>0.9) delta*=2;
+        delta = Math.round(8f*Math.random())*delta;
         deviceData.counter+=delta;
         Log.v(TAG,"demo: "+ratio+" / "+delta + " --> "+deviceData.counter);
         return deviceData;

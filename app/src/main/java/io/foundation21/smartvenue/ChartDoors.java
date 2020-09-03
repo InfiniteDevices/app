@@ -56,12 +56,13 @@ public class ChartDoors extends Drawable {
 
         Paint txtPaint = new Paint();
         txtPaint.setStyle(Paint.Style.STROKE);
+        graphPaint.setStrokeWidth(4);
         txtPaint.setColor(Color.DKGRAY);
         txtPaint.setTextSize(50);
         txtPaint.setFakeBoldText(true);
 
         float bottom = canvas.getHeight()-80;
-        float right =  canvas.getWidth()-200;
+        float right =  canvas.getWidth()-80;
         float left = 0;
         float top = 0;
 

@@ -83,11 +83,11 @@ public class SmartVenueApp extends AppCompatActivity
                     eventLabel.setText(eventDescription);
 
                     if ((float)counter/(float)capacity>THRESHOLD_ALARM) {
-                        background.setBackgroundColor(0x40c00000);
-                        eventCounter.setTextColor(Color.RED);
+                        background.setBackgroundColor(0xffff0000);
+                        eventCounter.setTextColor(Color.WHITE);
                     }
                     else if ((float)counter/(float)capacity>THRESHOLD_WARNING) {
-                        background.setBackgroundColor(0x40c0c000);
+                        background.setBackgroundColor(0xffffcc00);
                         eventCounter.setTextColor(Color.BLUE);
                     }
                     else {
